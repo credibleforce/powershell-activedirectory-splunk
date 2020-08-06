@@ -5,7 +5,7 @@
 #
 ####################################################
 
-ipmo ActiveDirectory;
+#ipmo ActiveDirectory;
 
 ################# Variables #####################
 
