@@ -1,0 +1,11 @@
+List of ldapsearch equivalent searches 
+======================================
+
+List Users:
+|ldapsearch search="(&(objectClass=user)(objectCategory=person))" attrs="name,sAMAccountName,description,objectCategory,objectClass,objectSID,distinguishedName,mail,title,manager,info,physicalDeliveryOfficeName,department,company,lastLogonTimestamp,whencreated,whenchanged,pwdLastSet,userAccountControl,primaryGroupId,userworkstations,usercertificate"
+
+List Computers:
+|ldapsearch search="(&(objectCategory=computer))" attrs="name,sAMAccountName,description,objectCategory,objectClass,objectSID,distinguishedName,operatingSystem,operatingSystemServicePack,operatingSystemVersion,useraccountcontrol,pwdLastSet,whenChanged,whenCreated,lastlogontimestamp,dNSHostName,usercertificate"
+
+List Groups:
+|ldapsearch search="(&(objectCategory=group))" attrs="name,sAMAccountName,description,objectCategory,objectClass,objectSID,distinguishedName,managedBy,mail,member,memberOf,whencreated,whenchanged"
