@@ -326,7 +326,7 @@ function Get-ADNestedGroups {
 write-output "Starting script..."
 
 $ldap_port = if($enable_ldaps -eq $true) { "636" }else{ "389" }
-$dnsroot = $(Get-ADRootDSE).dnsHostName
+$dnsroot = ([ADSI]"LDAP://rootdse").dnsHostName
 $guid = [guid]::NewGuid()
 $Root = [ADSI]"LDAP://${dnsroot}:${ldap_port}/RootDSE"
 $oForestConfig = $Root.Get("configurationNamingContext")
